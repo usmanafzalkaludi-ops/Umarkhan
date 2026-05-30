@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sir Umar Khan — Islamiyat Specialist</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Pacifico&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        /* Font System Configuration */
+        :root {
+            --font-headings: 'Syne', sans-serif;
+            --font-handwritten: 'Pacifico', cursive;
+            --font-body: 'JetBrains Mono', monospace;
+            /* Using a premium dynamic serif fallback representing the 'Worstveld Sling' structure for countdowns */
+            --font-numbers: 'Times New Roman', Times, serif; 
+            
+            --color-green: #22c55e;
+            --color-yellow: #eab308;
+            --color-bg: #0a0f0d;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .font-syne { font-family: var(--font-headings); font-weight: 800; }
+        .font-handwritten { font-family: var(--font-handwritten); }
+        .font-numbers { font-family: var(--font-numbers); font-weight: bold; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0f0d; }
+        ::-webkit-scrollbar-thumb { background: #22c55e; border-radius: 4px; }
+
+        /* iOS Watery Glossy Translucent Menu */
+        .ios-menu {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        /* Glowing Effects */
+        .glow-green { box-shadow: 0 0 20px rgba(34, 197, 94, 0.4); }
+        .glow-yellow { box-shadow: 0 0 20px rgba(234, 179, 8, 0.4); }
+        .text-glow { text-shadow: 0 0 10px rgba(34, 197, 94, 0.6); }
+
+        /* Infinite Loop Track Speeds */
+        .infinite-track-packages {
+            display: flex;
+            width: max-content;
+            animation: scrollPackages 18s linear infinite;
+        }
+        @keyframes scrollPackages {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .infinite-track-reviews {
+            display: flex;
+            width: max-content;
+            animation: scrollReviews 25s linear infinite;
+        }
+        @keyframes scrollReviews {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Pause infinite tracks on hover */
+        .infinite-track-packages:hover, .infinite-track-reviews:hover {
+            animation-play-state: paused;
+        }
+
+        /* Text Masking Reveal Base */
+        .text-reveal-highlight {
+            background: linear-gradient(to right, #22c55e 50%, transparent 50%);
+            background-size: 200% 100%;
+            background-position: 100% 0;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: rgba(255, 255, 255, 0.1);
+            transition: background-position 0.5s ease;
+        }
+        .text-reveal-highlight.active {
+            background-position: 0 0;
+            -webkit-text-fill-color: #ffffff;
+        }
+
+        /* Calendar flip/reveal countdown structure */
+        .calendar-digit {
+            position: relative;
+            display: inline-block;
+            height: 1.2em;
+            overflow: hidden;
+            line-height: 1.2em;
+        }
+
+        /* Ambient Floating 3D-like Islamiyat Elements in BG */
+        .bg-element {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.04;
+            font-size: 8rem;
+            filter: blur(1px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-element top-[120vh] left-[10%]" data-speed="2">🕌</div>
+    <div class="bg-element top-[240vh] right-[5%]" data-speed="-1">📖</div>
+    <div class="bg-element top-[320vh] left-[8%]" data-speed="3">🌙</div>
+    <div class="bg-element top-[410vh] right-[12%]" data-speed="1">🕌</div>
+
+    <nav class="fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] max-w-4xl z-50 ios-menu rounded-2xl px-6 py-4 flex justify-between items-center transition-all duration-300">
+        <span class="text-white tracking-widest text-xs font-bold font-syne">SIR UMAR KHAN</span>
+        <a href="https://wa.me/923102855225" target="_blank" class="bg-gradient-to-r from-green-500 to-yellow-500 text-black font-syne text-xs md:text-sm font-extrabold px-4 py-2 rounded-xl uppercase tracking-wider animate-pulse shadow-lg">
+            secure your grade shapatar🤷‍♂️
+        </a>
+    </nav>
+
+    <a href="https://wa.me/923102855225" target="_blank" class="fixed bottom-8 right-6 z-50 bg-green-500 hover:bg-green-400 text-black font-syne text-xs font-extrabold px-5 py-4 rounded-full flex items-center gap-2 glow-green tracking-wider uppercase border border-white/20 transition-all duration-300 hover:scale-110">
+        <i class="fab fa-whatsapp text-lg"></i> Secure Your Grade Now
+    </a>
+
+    <section class="relative w-screen h-screen flex flex-col justify-between items-center bg-black overflow-hidden px-4 py-12">
+        <div class="w-full max-w-5xl aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-gradient-to-tr from-green-950 via-black to-yellow-950 mt-16 flex items-center justify-center">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                <source src="./public/videos/hero-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="w-full max-w-3xl text-center pb-4">
+            <p class="font-handwritten text-yellow-400 text-xl md:text-3xl tracking-wide leading-relaxed">
+                "Islamiyat isn't about memorizing pages blindly; it's about connecting with the concepts so flawlessly that the examiner has no choice but to award an A*. Let's make this journey easy, interactive, and completely stressful-free together."
+            </p>
+            <p class="font-syne text-white/40 text-xs uppercase tracking-widest mt-3">— Sir Umar Khan</p>
+        </div>
+    </section>
+
+    <section id="stats-section" class="py-24 px-6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center relative z-10">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm shadow-xl">
+            <div class="text-5xl md:text-6xl text-green-400 font-numbers tracking-tight mb-2">
+                <span class="calendar-digit" data-target="5000">0</span>+
+            </div>
+            <p class="text-xs uppercase tracking-widest text-white/60 font-syne">Students Mentored</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm shadow-xl">
+            <div class="text-5xl md:text-6xl text-yellow-400 font-numbers tracking-tight mb-2">
+                <span class="calendar-digit" data-target="95">0</span>%
+            </div>
+            <p class="text-xs uppercase tracking-widest text-white/60 font-syne">Grade Improvement Rate</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm shadow-xl">
+            <div class="text-5xl md:text-6xl text-green-400 font-numbers tracking-tight mb-2">
+                <span class="calendar-digit" data-target="100">0</span>+
+            </div>
+            <p class="text-xs uppercase tracking-widest text-white/60 font-syne">Workshops Conducted</p>
+        </div>
+    </section>
+
+    <section class="py-16 overflow-hidden bg-gradient-to-b from-transparent via-green-950/20 to-transparent">
+        <div class="max-w-6xl mx-auto px-6 mb-8">
+            <h2 class="text-xs uppercase text-yellow-400 tracking-widest font-syne mb-2">Academic Modules</h2>
+            <p class="text-2xl font-syne text-white">Select Your Gateway to Success</p>
+        </div>
+
+        <div class="w-full flex">
+            <div class="infinite-track-packages gap-6 px-4">
+                <div class="w-[300px] bg-neutral-900 border-2 border-green-500/30 rounded-2xl p-6 glow-green flex flex-col justify-between h-[220px]">
+                    <h3 class="text-xl text-white font-syne">Online Classes</h3>
+                    <p class="text-xs text-white/60 leading-relaxed">Live immersive digital streaming modules with global interactivity across formats.</p>
+                    <span class="text-xs text-green-400 font-bold tracking-widest uppercase">O Level &bull; IGCSE &bull; A Level</span>
+                </div>
+                <div class="w-[300px] bg-neutral-900 border-2 border-yellow-500/30 rounded-2xl p-6 glow-yellow flex flex-col justify-between h-[220px]">
+                    <h3 class="text-xl text-white font-syne">Physical Batches</h3>
+                    <p class="text-xs text-white/60 leading-relaxed">High-energy classroom interactions bringing deep structural contextual learning alive.</p>
+                    <span class="text-xs text-yellow-400 font-bold tracking-widest uppercase">Premium Academies</span>
+                </div>
+                <div class="w-[300px] bg-neutral-900 border-2 border-green-500/30 rounded-2xl p-6 glow-green flex flex-col justify-between h-[220px]">
+                    <h3 class="text-xl text-white font-syne">Crash Courses</h3>
+                    <p class="text-xs text-white/60 leading-relaxed">Syllabus precision acceleration engineered directly targeting critical exam timelines.</p>
+                    <span class="text-xs text-green-400 font-bold tracking-widest uppercase">Targeted Revision</span>
+                </div>
+                <div class="w-[300px] bg-neutral-900 border-2 border-yellow-500/30 rounded-2xl p-6 glow-yellow flex flex-col justify-between h-[220px]">
+                    <h3 class="text-xl text-white font-syne">Special Workshops</h3>
+                    <p class="text-xs text-white/60 leading-relaxed">Exclusive deep-dives mapping marking criteria mastery and past-paper patterns.</p>
+                    <span class="text-xs text-yellow-400 font-bold tracking-widest uppercase">Exam Mastery</span>
+                </div>
+                <div class="w-[300px] bg-neutral-900 border-2 border-green-500/30 rounded-2xl p-6 glow-green flex flex-col justify-between h-[220px]">
+                    <h3 class="text-xl text-white font-syne">Past Paper Marathons</h3>
+                    <p class="text-xs text-white/60 leading-relaxed">Timed simulation modules engineered to guarantee bulletproof answer scripts.</p>
+                    <span class="text-xs text-green-400 font-bold tracking-widest uppercase">A* Preparation</span>
+                </div>
+                
+                <div class="w-[300px] bg-neutral-900 border-2 border-green-500/30 rounded-2xl p-6 glow-green flex flex-col justify-between h-[220px]">
+                    <h3 class="text-xl text-white font-syne">Online Classes</h3>
+                    <p class="text-xs text-white/60 leading-relaxed">Live immersive digital streaming modules with global interactivity across formats.</p>
+                    <span class="text-xs text-green-400 font-bold tracking-widest uppercase">O Level &bull; IGCSE &bull; A Level</span>
+                </div>
+                <div class="w-[300px] bg-neutral-900 border-2 border-yellow-500/30 rounded-2xl p-6 glow-yellow flex flex-col justify-between h-[220px]">
+                    <h3 class="text-xl text-white font-syne">Physical Batches</h3>
+                    <p class="text-xs text-white/60 leading-relaxed">High-energy classroom interactions bringing deep structural contextual learning alive.</p>
+                    <span class="text-xs text-yellow-400 font-bold tracking-widest uppercase">Premium Academies</span>
+                </div>
+                <div class="w-[300px] bg-neutral-900 border-2 border-green-500/30 rounded-2xl p-6 glow-green flex flex-col justify-between h-[220px]">
+                    <h3 class="text-xl text-white font-syne">Crash Courses</h3>
+                    <p class="text-xs text-white/60 leading-relaxed">Syllabus precision acceleration engineered directly targeting critical exam timelines.</p>
+                    <span class="text-xs text-green-400 font-bold tracking-widest uppercase">Targeted Revision</span>
+                </div>
+                <div class="w-[300px] bg-neutral-900 border-2 border-yellow-500/30 rounded-2xl p-6 glow-yellow flex flex-col justify-between h-[220px]">
+                    <h3 class="text-xl text-white font-syne">Special Workshops</h3>
+                    <p class="text-xs text-white/60 leading-relaxed">Exclusive deep-dives mapping marking criteria mastery and past-paper patterns.</p>
+                    <span class="text-xs text-yellow-400 font-bold tracking-widest uppercase">Exam Mastery</span>
+                </div>
+                <div class="w-[300px] bg-neutral-900 border-2 border-green-500/30 rounded-2xl p-6 glow-green flex flex-col justify-between h-[220px]">
+                    <h3 class="text-xl text-white font-syne">Past Paper Marathons</h3>
+                    <p class="text-xs text-white/60 leading-relaxed">Timed simulation modules engineered to guarantee bulletproof answer scripts.</p>
+                    <span class="text-xs text-green-400 font-bold tracking-widest uppercase">A* Preparation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-28 px-6 max-w-4xl mx-auto text-center">
+        <h2 class="text-xs uppercase tracking-widest text-green-400 font-syne mb-4">The Methodology</h2>
+        <p class="text-2xl md:text-4xl font-syne leading-relaxed mb-6 text-reveal-highlight font-scroll-trigger">
+            Cambridge Islamiyat requires strategic response structures, explicit contextual reference integration, and highly specific vocabulary loops.
+        </p>
+        <p class="text-2xl md:text-4xl font-syne leading-relaxed text-reveal-highlight font-scroll-trigger">
+            We break down the historic references with unparalleled clarity, modern analogies, and strategic analytical workflows.
+        </p>
+    </section>
+
+    <section class="py-24 px-6 bg-black/40 border-y border-white/5 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-xs uppercase tracking-widest text-yellow-400 font-syne mb-3">Campus Locations</h2>
+            <p class="text-3xl font-syne mb-12">Official Institutional Affiliations</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                <div class="zoom-reveal-card bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-green-500 transition-colors duration-300">
+                    <div class="text-4xl mb-4 text-green-400">🏫</div>
+                    <h3 class="text-2xl font-syne tracking-wide text-white">KEN ACADEMY</h3>
+                    <p class="text-xs text-white/40 uppercase tracking-widest mt-2">Core Faculty</p>
+                </div>
+                <div class="zoom-reveal-card bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-yellow-500 transition-colors duration-300">
+                    <div class="text-4xl mb-4 text-yellow-400">⚡</div>
+                    <h3 class="text-2xl font-syne tracking-wide text-white">NIXOR COLLEGE</h3>
+                    <p class="text-xs text-white/40 uppercase tracking-widest mt-2">Visiting Faculty</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 mb-12">
+            <h2 class="text-xs uppercase text-green-400 tracking-widest font-syne mb-2">Student Feedback</h2>
+            <p class="text-3xl font-syne text-white">How Gen Z Speaks About Me</p>
+        </div>
+
+        <div class="w-full flex">
+            <div class="infinite-track-reviews gap-6 px-4">
+                <div class="w-[320px] bg-[#121b14] border border-green-500/20 rounded-2xl p-5 shadow-lg flex flex-col gap-3">
+                    <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                        <span class="font-syne text-xs text-yellow-400 font-bold">Zainab Ahmed</span>
+                        <span class="text-xs text-white/50 bg-black/30 px-2 py-0.5 rounded-md">⭐ 5.0</span>
+                    </div>
+                    <p class="text-xs text-white/80 leading-relaxed font-sans">
+                        "Sir structural strategy changed everything tbh! Was literally failing mock papers, but the reference grids made the final CAIE paper look light work. Absolute legend behavior! 🔥"
+                    </p>
+                </div>
+                <div class="w-[320px] bg-[#1c1b12] border border-yellow-500/20 rounded-2xl p-5 shadow-lg flex flex-col gap-3">
+                    <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                        <span class="font-syne text-xs text-green-400 font-bold">Hamza Siddiqui</span>
+                        <span class="text-xs text-white/50 bg-black/30 px-2 py-0.5 rounded-md">⭐ 4.8</span>
+                    </div>
+                    <p class="text-xs text-white/80 leading-relaxed font-sans">
+                        "The jokes in the physical session keep you awake at 4 PM no cap. Sir makes boring deep references sound like a cinematic drama plot. Easiest A of my life."
+                    </p>
+                </div>
+                <div class="w-[320px] bg-[#121b14] border border-green-500/20 rounded-2xl p-5 shadow-lg flex flex-col gap-3">
+                    <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                        <span class="font-syne text-xs text-yellow-400 font-bold">Ayesha Khan</span>
+                        <span class="text-xs text-white/50 bg-black/30 px-2 py-0.5 rounded-md">⭐ 5.0</span>
+                    </div>
+                    <p class="text-xs text-white/80 leading-relaxed font-sans">
+                        "If you aren't preparing with Sir Umar's marking schemes breakdowns, you are playing on hard mode for absolutely no reason. Best teacher ever 😭🙏"
+                    </p>
+                </div>
+                <div class="w-[320px] bg-[#1c1b12] border border-yellow-500/20 rounded-2xl p-5 shadow-lg flex flex-col gap-3">
+                    <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                        <span class="font-syne text-xs text-green-400 font-bold">Shahzaib Malik</span>
+                        <span class="text-xs text-white/50 bg-black/30 px-2 py-0.5 rounded-md">⭐ 4.5</span>
+                    </div>
+                    <p class="text-xs text-white/80 leading-relaxed font-sans">
+                        "The crash courses are pure cheat codes. Memorization tables saved my entire transcript. Highly recommend to everyone stressed out right now."
+                    </p>
+                </div>
+                <div class="w-[320px] bg-[#121b14] border border-green-500/20 rounded-2xl p-5 shadow-lg flex flex-col gap-3">
+                    <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                        <span class="font-syne text-xs text-yellow-400 font-bold">Mariam Raza</span>
+                        <span class="text-xs text-white/50 bg-black/30 px-2 py-0.5 rounded-md">⭐ 4.9</span>
+                    </div>
+                    <p class="text-xs text-white/80 leading-relaxed font-sans">
+                        "Literally unmatched vibes. Super friendly, clear answers to doubts, and zero stressful energy. Sir handles whole syllabus like a breeze."
+                    </p>
+                </div>
+
+                <div class="w-[320px] bg-[#121b14] border border-green-500/20 rounded-2xl p-5 shadow-lg flex flex-col gap-3">
+                    <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                        <span class="font-syne text-xs text-yellow-400 font-bold">Zainab Ahmed</span>
+                        <span class="text-xs text-white/50 bg-black/30 px-2 py-0.5 rounded-md">⭐ 5.0</span>
+                    </div>
+                    <p class="text-xs text-white/80 leading-relaxed font-sans">
+                        "Sir structural strategy changed everything tbh! Was literally failing mock papers, but the reference grids made the final CAIE paper look light work. Absolute legend behavior! 🔥"
+                    </p>
+                </div>
+                <div class="w-[320px] bg-[#1c1b12] border border-yellow-500/20 rounded-2xl p-5 shadow-lg flex flex-col gap-3">
+                    <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                        <span class="font-syne text-xs text-green-400 font-bold">Hamza Siddiqui</span>
+                        <span class="text-xs text-white/50 bg-black/30 px-2 py-0.5 rounded-md">⭐ 4.8</span>
+                    </div>
+                    <p class="text-xs text-white/80 leading-relaxed font-sans">
+                        "The jokes in the physical session keep you awake at 4 PM no cap. Sir makes boring deep references sound like a cinematic drama plot. Easiest A of my life."
+                    </p>
+                </div>
+                <div class="w-[320px] bg-[#121b14] border border-green-500/20 rounded-2xl p-5 shadow-lg flex flex-col gap-3">
+                    <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                        <span class="font-syne text-xs text-yellow-400 font-bold">Ayesha Khan</span>
+                        <span class="text-xs text-white/50 bg-black/30 px-2 py-0.5 rounded-md">⭐ 5.0</span>
+                    </div>
+                    <p class="text-xs text-white/80 leading-relaxed font-sans">
+                        "If you aren't preparing with Sir Umar's marking schemes breakdowns, you are playing on hard mode for absolutely no reason. Best teacher ever 😭🙏"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black pt-20 pb-12 px-6 border-t border-white/10">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="font-handwritten text-4xl text-yellow-400 mb-4">ajao gup shup lagayien</h2>
+            <p class="text-xs text-white/50 uppercase tracking-widest font-syne mb-12">Connect across official digital handle points</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                <a href="https://wa.me/923102855225" target="_blank" class="flex items-center justify-center gap-3 bg-neutral-900 border border-green-500/30 hover:bg-green-500 hover:text-black py-4 rounded-xl text-sm font-syne uppercase tracking-wider transition-all duration-300">
+                    <i class="fab fa-whatsapp text-xl text-green-500 mix-blend-difference"></i> WhatsApp Contact
+                </a>
+                <a href="https://www.instagram.com/umar.khan1991?igsh=bnBzeXJ4M3g2a2U4" target="_blank" class="flex items-center justify-center gap-3 bg-neutral-900 border border-yellow-500/30 hover:bg-yellow-500 hover:text-black py-4 rounded-xl text-sm font-syne uppercase tracking-wider transition-all duration-300">
+                    <i class="fab fa-instagram text-xl text-yellow-500 mix-blend-difference"></i> Instagram Hub
+                </a>
+                <a href="https://youtube.com/@umarkhan313?si=nhXNDuXpnszVkrQj" target="_blank" class="flex items-center justify-center gap-3 bg-neutral-900 border border-red-500/30 hover:bg-red-600 hover:text-white py-4 rounded-xl text-sm font-syne uppercase tracking-wider transition-all duration-300">
+                    <i class="fab fa-youtube text-xl text-red-500 mix-blend-difference"></i> junejo 2.0
+                </a>
+            </div>
+
+            <div class="border-t border-white/5 pt-8 text-xs text-white/30 font-sans flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 Sir Umar Khan. All Student Rights Reserved.</p>
+                <p class="tracking-widest uppercase">Built with ❤️ for Islamic Specialists</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        // Initialize Core Engine Modules
+        gsap.registerPlugin(ScrollTrigger);
+
+        // 1. Text Reveal Highlight Control Animation Loop (Scroll-Linked)
+        document.querySelectorAll('.font-scroll-trigger').forEach((paragraph) => {
+            gsap.to(paragraph, {
+                scrollTrigger: {
+                    trigger: paragraph,
+                    start: "top 75%",
+                    end: "bottom 40%",
+                    toggleClass: "active",
+                    once: false
+                }
+            });
+        });
+
+        // 2. Calendar Flip Countdown Reveal Numbers Logic Animation
+        function animateCalendarValue(element, target) {
+            let countObj = { value: 0 };
+            gsap.to(countObj, {
+                value: target,
+                duration: 2.5,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: "#stats-section",
+                    start: "top 80%"
+                },
+                onUpdate: function () {
+                    element.innerText = Math.floor(countObj.value).toLocaleString();
+                }
+            });
+        }
+
+        document.querySelectorAll('.calendar-digit').forEach((digit) => {
+            const targetValue = parseInt(digit.getAttribute('data-target'), 10);
+            animateCalendarValue(digit, targetValue);
+        });
+
+        // 3. Institutional Card Zoom Scale Entry Reveal (Staggered Scroll Reveal)
+        gsap.from(".zoom-reveal-card", {
+            scale: 0.85,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.25,
+            ease: "back.out(1.7)",
+            scrollTrigger: {
+                trigger: ".zoom-reveal-card",
+                start: "top 85%"
+            }
+        });
+
+        // 4. Parallax Floating Interaction Engine Mock Modifiers for Background Elements
+        window.addEventListener('mousemove', (e) => {
+            const depthElements = document.querySelectorAll('.bg-element');
+            const mouseX = (e.clientX - window.innerWidth / 2) * 0.05;
+            const mouseY = (e.clientY - window.innerHeight / 2) * 0.05;
+
+            depthElements.forEach((el) => {
+                const speed = parseFloat(el.getAttribute('data-speed') || '1');
+                gsap.to(el, {
+                    x: mouseX * speed,
+                    y: mouseY * speed,
+                    duration: 1,
+                    ease: "power1.out"
+                });
+            });
+        });
+    </script>
+</body>
+</html>
